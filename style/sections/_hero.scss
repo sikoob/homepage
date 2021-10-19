@@ -68,3 +68,17 @@
     }
   }
 }
+
+.hero__logo {
+  position: absolute;
+  top: 3rem;
+  left: 5rem;
+  width: 25rem;
+  color: white;
+  background-color: rgba(0,0,0,0.05);
+  border-radius: 1000rem;
+
+  @media (max-width: 36em) {
+    width: 20rem;
+  }
+}
