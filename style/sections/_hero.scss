@@ -19,7 +19,7 @@
   right: 0;
   z-index: -1;
 
-  @include respond(phone) {
+  @media (max-width: $breakpoint-xs) {
     padding: 0rem $default-font-size;
   }
 
@@ -41,19 +41,21 @@
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
 
-
-    @include respond(tab-land) {
+    @media (max-width: $breakpoint-l) {
       font-size: 4rem;
     }
-    @include respond(tab-port) {
+
+    @media (max-width: $breakpoint-tablet) {
       font-size: 3.6rem;
       text-align: center;
     }
-    @include respond(phone) {
+
+    @media (max-width: $breakpoint-xs) {
       font-size: 3.5rem;
       line-height: 1.5;
     }
-    @include respond(phone-xs) {
+
+    @media (max-width: $breakpoint-xxs) {
       font-size: 2.8rem;
     }
   }

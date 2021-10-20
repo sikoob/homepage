@@ -14,17 +14,23 @@ $default-font-size: 1.6rem;
 $big-font-size: 4rem;
 $mid-font-size: 2.5rem;
 
-/*1200px oder schmaler*/
+//1800px oder schmaler
+$breakpoint-xxl: 112.5em!default;
+
+//1200px oder schmaler
 $breakpoint-l: 75em!default;
 
-/*992px oder schmaler*/
+//992px oder schmaler
 $breakpoint-md: 62em!default;
 
-/*768px oder schmaler*/
+//900px oder schmaler
+$breakpoint-tablet: 56.25!default;
+
+//768px oder schmaler
 $breakpoint-sm: 48em!default;
 
-/*576px oder schmaler*/
-$breakpoint-xs: 36em!default;
+//600px oder schmaler
+$breakpoint-xs: 37.5em!default;
 
-/*400px oder schmaler*/
-$breakpoint-xxs: 25em!default;
+//320px oder schmaler
+$breakpoint-xxs: 20em!default;

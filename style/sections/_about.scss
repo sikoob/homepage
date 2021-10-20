@@ -5,65 +5,81 @@
   border-top: 0px;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  padding: 2rem 0rem;
 
-  @include respond(tab-land) {
+  @media (max-width: $breakpoint-l) {
     height: 100%;
     -webkit-clip-path: none;
     clip-path: none;
   }
 
   &__container {
-    margin: 5rem 0rem;
-    height: 100%;
+    @include make-container();
   }
 
   &__wrapper {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    @include respond(phone) {
-      padding-bottom: 5rem;
+    padding: 0 0 6rem 0;
+    max-width: 112.5em;
+
+    & > div{          //für Abstand zwischen den beiden nachfolgenden Divs
+    margin: 0 10rem;
     }
-    
-    &-title {
-      font-weight: 700;
-      font-size: 4rem;
-      margin: 1rem 0rem;
+
+    @media (max-width: $breakpoint-xs) {
+      padding-bottom: 5rem;
     }
 
     &-image {
-      display: flex;
-      height: 100%;
-      align-items: center;
+      flex: 0 0 33%;
+      position: relative;
       justify-content: center;
+      padding-left: -5rem;
 
-      @include respond(tab-land) {
+      @media(max-width: $breakpoint-l) {
         height: 100%;
       }
-      @include respond(tab-port-sm) {
+
+      @media (max-width: $breakpoint-sm) {
         padding-bottom: 6.4rem;
+      }
+
+      &-content {
+        max-width: 35rem;
+        height: auto;
+        box-shadow: 0 1rem 3rem rgba($black, .175);
+        border-radius: 50%;
       }
     }
 
     &-info {
-      display: flex;
-      height: 100%;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+      flex: 0 0 66%;
+      margin-left: 2.5rem;
 
-      @include respond(tab-port-sm) {
-        align-items: center;
+      &-title {
+        font-weight: 700;
+        font-size: 4rem;
+        margin: 1rem 0rem;
+        text-shadow: 0 0 0.5rem black;
       }
 
       &-text {
         text-align: left;
         font-size: 2.2rem;
+        text-shadow: 0 0 0.5rem black;
 
-        @include respond(tab-port) {
+        @media (max-width: $breakpoint-tablet) {
           text-align: left;
         }
-        @include respond(tab-port-sm) {
+
+        @media (max-width: $breakpoint-sm) {
           text-align: center;
         }
       }
