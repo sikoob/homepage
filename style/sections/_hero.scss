@@ -1,3 +1,5 @@
+@use "sass:color";
+
 #hero {
   min-height: 100vh;
   height: 100vh;
@@ -28,13 +30,24 @@
     padding: 0rem $default-font-size;
   }
 
-  .hero-title {
+  .hero__container {
+    z-index: 2;
+  }
+
+  .hero__title {
     font-size: 6.2rem;
-    font-weight: 1000;
+    font-weight: 700;
     color: #d8d7d4;
     margin-top: 3.2rem;
     margin-bottom: 3.2rem;
     text-align: left;
+
+    animation-name: hero__heading-main-font-weight;
+    animation-delay: 0.75s;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+
 
     @include respond(tab-land) {
       font-size: 4rem;
@@ -50,10 +63,27 @@
     @include respond(phone-xs) {
       font-size: 2.8rem;
     }
+}
+
+@keyframes hero__heading-main-font-weight {
+  0% {
+      opacity: 0;
+      font-weight: 100;
   }
+  100% {
+      opacity: 1;
+      font-weight: 700;
+  }
+}
 
   .hero-cta {
     display: flex;
+
+    animation-name: hero__cta-opacity;
+    animation-delay: 0.75s;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
 
     @include respond(tab-port) {
       justify-content: center;
@@ -61,10 +91,20 @@
 
     & a {
       font-size: 3.5rem;
+      z-index: 2;
 
       @include respond(phone) {
         font-size: 2rem;
       }
+    }
+  }
+
+  @keyframes hero__cta-opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
   }
 }
@@ -77,8 +117,56 @@
   color: white;
   background-color: rgba(0,0,0,0.05);
   border-radius: 1000rem;
+  z-index: 2;
+
+  animation-name: hero__logo-opacity;
+    animation-delay: 0.75s;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
 
   @media (max-width: 36em) {
     width: 20rem;
   }
+}
+
+@keyframes hero__logo-opacity {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.hero__video {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  
+  width: 100%;
+
+  @supports (object-fit: cover) and (object-position: center center) {
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+  }
+}
+
+.hero__video-colorize {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background-color: color.scale(black, $alpha: -60%);
+}
+
+.hero__name {
+  color: $secondary-color;
 }
