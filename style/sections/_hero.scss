@@ -1,12 +1,14 @@
 @use "sass:color";
 
-#hero {
+.hero {
   min-height: 100vh;
   height: 100vh;
   display: flex;
   align-items: center;
   border-bottom: 0px;
-  background: #7c6447;
+  background: url("../../assets/background.jpg");
+  background-position: center;
+  background-size: cover; 
   font-weight: 400;
   color: $dark-blue-text;
   padding: 0rem 5.6rem;
@@ -17,24 +19,15 @@
   right: 0;
   z-index: -1;
 
-  // Set position sticky so the jumbotron stays fixed while you scroll.
-  // position: sticky;
-
-  // If you want to set a background image on the hero section, uncomment these with your custom image
-
-  background: url("../../assets/background.jpg");
-  background-position: center;
-  background-size: cover; 
-
   @include respond(phone) {
     padding: 0rem $default-font-size;
   }
 
-  .hero__container {
+  &__container {
     z-index: 2;
   }
 
-  .hero__title {
+  &__title {
     font-size: 6.2rem;
     font-weight: 700;
     color: #d8d7d4;
@@ -63,6 +56,83 @@
     @include respond(phone-xs) {
       font-size: 2.8rem;
     }
+  }
+
+    &__name {
+      color: $secondary-color;
+    }
+
+    &__cta {
+      display: flex;
+  
+      animation-name: hero__cta-opacity;
+      animation-delay: 0.75s;
+      animation-duration: 1.5s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: both;
+  
+      @include respond(tab-port) {
+        justify-content: center;
+      }
+  
+      & a {
+        font-size: 3.5rem;
+        z-index: 2;
+  
+        @include respond(phone) {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    &__logo {
+      position: absolute;
+      top: 3rem;
+      left: 5rem;
+      width: 25rem;
+      color: white;
+      background-color: rgba(0,0,0,0.05);
+      border-radius: 1000rem;
+      z-index: 2;
+    
+      animation-name: hero__logo-opacity;
+        animation-delay: 0.75s;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: both;
+    
+      @media (max-width: 36em) {
+        width: 20rem;
+      }
+    }
+
+    &__video {
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      
+      width: 100%;
+    
+      @supports (object-fit: cover) and (object-position: center center) {
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+      }
+    }
+
+    &__video-colorize {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    
+      background-color: color.scale(black, $alpha: -60%);
+    }
 }
 
 @keyframes hero__heading-main-font-weight {
@@ -76,57 +146,12 @@
   }
 }
 
-  .hero-cta {
-    display: flex;
-
-    animation-name: hero__cta-opacity;
-    animation-delay: 0.75s;
-    animation-duration: 1.5s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: both;
-
-    @include respond(tab-port) {
-      justify-content: center;
-    }
-
-    & a {
-      font-size: 3.5rem;
-      z-index: 2;
-
-      @include respond(phone) {
-        font-size: 2rem;
-      }
-    }
+@keyframes hero__cta-opacity {
+  0% {
+      opacity: 0;
   }
-
-  @keyframes hero__cta-opacity {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-  }
-}
-
-.hero__logo {
-  position: absolute;
-  top: 3rem;
-  left: 5rem;
-  width: 25rem;
-  color: white;
-  background-color: rgba(0,0,0,0.05);
-  border-radius: 1000rem;
-  z-index: 2;
-
-  animation-name: hero__logo-opacity;
-    animation-delay: 0.75s;
-    animation-duration: 1.5s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: both;
-
-  @media (max-width: 36em) {
-    width: 20rem;
+  100% {
+      opacity: 1;
   }
 }
 
@@ -137,36 +162,4 @@
   100% {
       opacity: 1;
   }
-}
-
-.hero__video {
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  
-  width: 100%;
-
-  @supports (object-fit: cover) and (object-position: center center) {
-      height: 100%;
-      object-fit: cover;
-      object-position: center center;
-  }
-}
-
-.hero__video-colorize {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-  background-color: color.scale(black, $alpha: -60%);
-}
-
-.hero__name {
-  color: $secondary-color;
 }
