@@ -154,7 +154,7 @@
               />
             </div>
             <div class="about__wrapper-info">
-              <h2 class="about__wrapper-info-title">Wer ich bin</h2>
+              <h2 class="about__wrapper-info-title section__title">Wer ich bin</h2>
               <p class="about__wrapper-info-text">
                 Hallo! Mein Name ist Simon und ich entwickle und designe Lösungen für verschiedene Auftritte im Web. Wollen Sie über Ihr Unternehmen informieren, eine
                 Community gründen oder fehlt Ihnen einfach die Plattform für Ihre eigenen Projekte? Ich kümmere mich darum, dass Ihre Inhalte einfach zugänglich, verständlich und gut strukturiert im Internet erreichbar sind.
@@ -165,140 +165,39 @@
     </section>
 
     <!-- **** Projects Section **** -->
-    <section id="projects">
-      <div class="container">
-        <div class="project-wrapper">
-          <h2 class="section-title dark-blue-text">Projekte</h2>
-
-          <!-- Each .row is a project -->
-<!--           <div class="row">
-            <div class="col-lg-4 col-sm-12">
-              <div class="project-wrapper__text">
-                <h3 class="project-wrapper__text-title">Project Title 0</h3>
-                <div>
-                  <p class="mb-4">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Excepturi neque, ipsa animi maiores repellendus distinctio
-                    aperiam earum dolor voluptatum consequatur blanditiis
-                    inventore debitis fuga numquam voluptate ex architecto
-                    itaque molestiae.
-                  </p>
-                </div>
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  class="cta-btn cta-btn--hero"
-                  href="#!"
-                >
-                  See Live
-                </a>
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  class="cta-btn text-color-main"
-                  href="#!"
-                >
-                  Source Code
-                </a>
-              </div>
+    <section id="projects" class="projects">
+      <div class="projects__container">
+        <h2 class="section__title">Projekte</h2>
+        <div class="projects__wrapper">
+      <!-- Each .row is a project -->
+          <div class="projects__row">
+            <div class="projects__row-text">
+              <h3 class="projects__row-title">Project Title 0</h3>
+              <p class="projects__row-paragraph">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Excepturi neque, ipsa animi maiores repellendus distinctio
+                aperiam earum dolor voluptatum consequatur blanditiis
+                inventore debitis fuga numquam voluptate ex architecto
+                itaque molestiae.
+              </p>
+              <a
+                rel="noreferrer"
+                target="_blank"
+                class="cta-btn cta-btn--hero"
+                href="#!"
+              >
+                See Live
+              </a>
+              <a
+                rel="noreferrer"
+                target="_blank"
+                class="cta-btn text-color-main"
+                href="#!"
+              >
+                Source Code
+              </a>
             </div>
-            <div class="col-lg-8 col-sm-12">
-              <div class="project-wrapper__image">
-                <a rel="noreferrer" href="#!" target="_blank">
-                  <div data-tilt class="thumbnail rounded js-tilt">
-                    <img
-                      alt="Project Image"
-                      class="img-fluid"
-                      src="assets/project.jpg"
-                    />
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div> -->
-          <!-- /END Project -->
-
-          <!-- Each .row is a project -->
-          <!-- <div class="row">
-            <div class="col-lg-4 col-sm-12">
-              <div class="project-wrapper__text">
-                <h3 class="project-wrapper__text-title">Project Title 1</h3>
-                <div>
-                  <p class="mb-4">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Excepturi neque, ipsa animi maiores repellendus distinctio
-                    aperiam earum dolor voluptatum consequatur blanditiis
-                    inventore debitis fuga numquam voluptate ex architecto
-                    itaque molestiae.
-                  </p>
-                </div>
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  class="cta-btn cta-btn--hero"
-                  href="#!"
-                >
-                  See Live
-                </a>
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  class="cta-btn text-color-main"
-                  href="#!"
-                >
-                  Source Code
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-8 col-sm-12">
-              <div class="project-wrapper__image">
-                <a rel="noreferrer" href="#!" target="_blank">
-                  <div data-tilt class="thumbnail rounded js-tilt">
-                    <img
-                      alt="Project Image"
-                      class="img-fluid"
-                      src="assets/project.jpg"
-                    />
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div> -->
-          <!-- /END Project -->
-
-          <!-- Each .row is a project -->
-          <!-- <div class="row">
-            <div class="col-lg-4 col-sm-12">
-              <div class="project-wrapper__text">
-                <h3 class="project-wrapper__text-title">Project Title 2</h3>
-                <div>
-                  <p class="mb-4">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Excepturi neque, ipsa animi maiores repellendus distinctio
-                    aperiam earum dolor voluptatum consequatur blanditiis
-                    inventore debitis fuga numquam voluptate ex architecto
-                    itaque molestiae.
-                  </p>
-                </div>
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  class="cta-btn cta-btn--hero"
-                  href="#!"
-                >
-                  See Live
-                </a>
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  class="cta-btn text-color-main"
-                  href="#!"
-                >
-                  Source Code
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-8 col-sm-12">
+            <div class="projects__row-column-image">
               <div class="project-wrapper__image">
                 <a rel="noreferrer" href="#!" target="_blank">
                   <div data-tilt class="thumbnail rounded js-tilt">
@@ -321,7 +220,7 @@
     <!-- **** Contact Section **** -->
     <section id="contact">
       <div class="container">
-        <h2 class="section-title">Kontakt</h2>
+        <h2 class="section__title">Kontakt</h2>
         <div class="contact-wrapper">
           <p class="contact-wrapper__text">Lassen Sie uns jetzt zusammen starten</p>
           <a
