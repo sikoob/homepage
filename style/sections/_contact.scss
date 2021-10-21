@@ -1,4 +1,4 @@
-#contact {
+.contact {
   background-image: linear-gradient(
     135deg,
     $primary-color 0%,
@@ -6,33 +6,40 @@
   );
   -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
-  padding: 15rem 0 10rem 0;
-  margin-top: -10rem;
-  margin-bottom: -1px;
+  padding: 10rem 0 8rem 0;
   color: $white-color;
 
-  @include respond(tab-land) {
+  @media (max-width: $breakpoint-l) {
     padding: 10rem 0;
     clip-path: none;
     margin-top: 0;
     -webkit-clip-path: none;
   }
 
-  .contact-wrapper {
+  &__container {
+    @include make-container();
+  }
+
+  &__wrapper {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     margin-top: 3.2rem;
     padding: 0 2rem;
     backface-visibility: hidden;
 
-    &__text {
+    &-text {
       margin-bottom: 2.5rem;
-      font-color: $white-color;
+      color: $white-color;
     }
 
-    &__text,
+    &-text,
     a {
       font-size: 2.4rem;
 
-      @include respond(phone) {
+      @media (max-width: $breakpoint-xs) {
         font-size: 2rem;
       }
     }

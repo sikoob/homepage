@@ -73,7 +73,7 @@
       animation-timing-function: ease-in-out;
       animation-fill-mode: both;
   
-      @include respond(tab-port) {
+      @media (max-width: $breakpoint-sm) {
         justify-content: center;
       }
   
@@ -81,7 +81,7 @@
         font-size: 3.5rem;
         z-index: 2;
   
-        @include respond(phone) {
+        @media (max-width: $breakpoint-xs) {
           font-size: 2rem;
         }
       }
