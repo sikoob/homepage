@@ -14,7 +14,7 @@ function checkScroll() {
     }
 }
 
- function (props, defaultProps) {
+function ScriptIE(props, defaultProps) {
     // Fix for SCRIPT1028 in Edge
     return Object.assign({}, defaultProps, props);
   }
