@@ -74,13 +74,22 @@
 
 /* Contact Style */
 .cta-btn--contact {
-  @include supportColorForIE11();
   color: $dark-blue-text;
+  -webkit-text-fill-color: $dark-blue-text; // fallback
+  @supports (-webkit-background-clip: text) or (background-clip: text) {
+    background-image: linear-gradient(
+      135deg,
+      $light-grey 50%,
+      $secondary-color 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   border: 2px solid transparent;
   border-image: linear-gradient(
     135deg,
-    $dark-blue-text 50%,
-     $dark-grey 100%
+    $light-grey 50%,
+    $secondary-color 100%
   );
   border-image-slice: 1;
   font-weight: 700;
@@ -100,7 +109,7 @@
   &::after {
     background-image: linear-gradient(
       135deg,
-      $primary-color 0%,
+      whit 0%,
       $secondary-color 100%
     );
 

@@ -120,20 +120,18 @@ body {
 
 /* Contact Style */
 .cta-btn--contact {
-  color: #00e29c;
-  -webkit-text-fill-color: #00e29c;
   color: #011820;
+  -webkit-text-fill-color: #011820;
   border: 2px solid transparent;
-  border-image: linear-gradient(135deg, #011820 50%, #333333 100%);
+  border-image: linear-gradient(135deg, #dfdfdf 50%, #00e29c 100%);
   border-image-slice: 1;
   font-weight: 700;
 }
 @supports (-webkit-background-clip: text) or (background-clip: text) {
   .cta-btn--contact {
-    background-image: linear-gradient(135deg, #26464d 0%, #00e29c 100%);
+    background-image: linear-gradient(135deg, #dfdfdf 50%, #00e29c 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: transparent;
   }
 }
 @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
@@ -152,7 +150,7 @@ body {
   }
 }
 .cta-btn--contact::after {
-  background-image: linear-gradient(135deg, #26464d 0%, #00e29c 100%);
+  background-image: linear-gradient(135deg, whit 0%, #00e29c 100%);
 }
 @media (max-width: 37.5em) {
   .cta-btn--contact::after {
@@ -408,7 +406,7 @@ body {
   backface-visibility: hidden;
 }
 .contact__wrapper-text {
-  margin-bottom: 2.5rem;
+  margin-bottom: 4rem;
   color: #ffffff;
 }
 .contact__wrapper-text,
