@@ -20,6 +20,7 @@
     @include make-container();
   }
 
+
   &__wrapper {
     position: relative;
     top: 0;
@@ -29,19 +30,33 @@
     margin-top: 3.2rem;
     padding: 0 2rem;
     backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    max-width: 112.5em;
+    height: 100%;
 
     &-text {
+      flex: 0 0 50%;
+    }
+
+    &-text-content {
       margin-bottom: 4rem;
       color: $white-color;
     }
 
-    &-text,
+    &-text-content,
     a {
       font-size: 2.4rem;
 
       @media (max-width: $breakpoint-xs) {
         font-size: 2rem;
       }
+    }
+      
+    &-logo {
+      flex: 0 0 55%;
     }
   }
 }
