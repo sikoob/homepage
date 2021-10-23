@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .footer {
   position: relative;
   width: 100%;
@@ -30,26 +32,27 @@
   }
 
   &__text {
-    color: darken($white-color, 50%);
-    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    a {
+    &-content{
+      text-align: center;
+      text-decoration: none;
       color: darken($white-color, 50%);
-      font-size: 1.3rem;
-      transition: all 0.4s;
-      display: inline-block;
-      background-color: $dark-grey;
-
-      &:hover,
-      &:active {
-        color: $primary-color;
-        -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-      }
+      font-size: 1.4rem;
     }
+
+    a.footer__text-content:hover {
+      color: $light-grey;
+    }
+
   }
 
-  & hr {
+    
+
+  &__horizontal {
     margin: 1rem auto;
     border: 0;
     width: 50%;
