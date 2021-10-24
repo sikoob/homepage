@@ -6,12 +6,32 @@
 }
 
 html {
+  font-family: "Urbanist", sans-serif;
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+@media (min-width: 100em) {
+  html {
+    font-size: 75%;
+  }
+}
+@media (min-width: 133em) {
+  html {
+    font-size: 80%;
+  }
+}
+@media (min-width: 166em) {
+  html {
+    font-size: 85%;
+  }
+}
+@media (max-width: 20em) {
+  html {
+    font-size: 62.5%;
+  }
+}
 
 body {
-  font-family: "Urbanist", sans-serif;
   text-align: center;
 }
 
@@ -292,8 +312,35 @@ body {
   clear: both;
   content: "";
 }
+@media (max-width: 75em) {
+  .about__container {
+    max-width: 75rem;
+  }
+}
+@media (max-width: 62em) {
+  .about__container {
+    max-width: 62rem;
+  }
+}
+@media (max-width: 56.25) {
+  .about__container {
+    max-width: 56.25rem;
+  }
+}
+@media (max-width: 48em) {
+  .about__container {
+    max-width: 48rem;
+  }
+}
 @media (max-width: 37.5em) {
   .about__container {
+    max-width: 37.5rem;
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 20em) {
+  .about__container {
+    max-width: 20rem;
     padding: 0 1rem;
   }
 }
@@ -391,8 +438,35 @@ body {
   clear: both;
   content: "";
 }
+@media (max-width: 75em) {
+  .contact__container {
+    max-width: 75rem;
+  }
+}
+@media (max-width: 62em) {
+  .contact__container {
+    max-width: 62rem;
+  }
+}
+@media (max-width: 56.25) {
+  .contact__container {
+    max-width: 56.25rem;
+  }
+}
+@media (max-width: 48em) {
+  .contact__container {
+    max-width: 48rem;
+  }
+}
 @media (max-width: 37.5em) {
   .contact__container {
+    max-width: 37.5rem;
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 20em) {
+  .contact__container {
+    max-width: 20rem;
     padding: 0 1rem;
   }
 }
@@ -620,8 +694,35 @@ body {
   clear: both;
   content: "";
 }
+@media (max-width: 75em) {
+  .projects__container {
+    max-width: 75rem;
+  }
+}
+@media (max-width: 62em) {
+  .projects__container {
+    max-width: 62rem;
+  }
+}
+@media (max-width: 56.25) {
+  .projects__container {
+    max-width: 56.25rem;
+  }
+}
+@media (max-width: 48em) {
+  .projects__container {
+    max-width: 48rem;
+  }
+}
 @media (max-width: 37.5em) {
   .projects__container {
+    max-width: 37.5rem;
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 20em) {
+  .projects__container {
+    max-width: 20rem;
     padding: 0 1rem;
   }
 }

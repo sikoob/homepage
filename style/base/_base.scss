@@ -5,11 +5,27 @@
 }
 
 html {
+  font-family: "Urbanist", sans-serif;
   font-size: 62.5%;
   scroll-behavior: smooth;
+
+  @media (min-width: 100em) {             //Browserfenster min. 1600px breit
+    font-size: 75%;                    //font-size in HTML steuert alle rem-Angaben in Child --> wird alles reingezoomt
+  }
+
+  @media (min-width: 133em) {
+      font-size: 80%;
+  }
+
+  @media (min-width: 166em) {
+      font-size: 85%;
+  }
+
+  @media (max-width:$breakpoint-xxs) {
+      font-size: 62.5%;
+  }
 }
 
 body {
-  font-family: "Urbanist", sans-serif;
   text-align: center;
 }

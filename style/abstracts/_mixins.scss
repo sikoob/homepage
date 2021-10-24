@@ -34,16 +34,38 @@
 }
 
 @mixin make-container() {
-    max-width: 112.5rem;
-    width: 100%;
-    /*1 rem = 16px --> 1200px; Bezug auf Standardschriftgröße von Browser*/
-    margin: 4rem auto;
-    /*mittig zentriert*/
-    padding: 0 2rem;
+  max-width: 112.5rem;
+  width: 100%;
+  /*1 rem = 16px --> 1200px; Bezug auf Standardschriftgröße von Browser*/
+  margin: 4rem auto;
+  /*mittig zentriert*/
+  padding: 0 2rem;
 
-    @include clearfix;
+  @include clearfix;
 
-    @media (max-width: $breakpoint-xs) {
-        padding: 0 1rem;
-    }
+  @media (max-width: $breakpoint-l) {
+    max-width: 75rem;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    max-width: 62rem;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    max-width: 56.25rem;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    max-width: 48rem;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    max-width: 37.5rem;
+    padding: 0 1rem;
+  }
+
+  @media (max-width: $breakpoint-xxs) {
+    max-width: 20rem;
+    padding: 0 1rem;
+  }
 }
