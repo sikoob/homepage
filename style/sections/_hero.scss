@@ -22,14 +22,31 @@
     padding: 0rem $default-font-size;
   }
 
+  @media (max-width: $breakpoint-xxs) {
+    padding: 0rem $default-font-size;
+    margin-bottom: -4rem;
+    max-width: 25rem;
+    height: 100vh;
+  }
+
+
   &__container {
     z-index: 2;
+    @include make-container();
+
+    @media (max-width: $breakpoint-xxs) {
+      width: 20rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   &__title {
     font-size: 6.2rem;
     font-weight: 700;
-    color: #d8d7d4;
+    color: $light-grey;
     margin-top: 3.2rem;
     margin-bottom: 3.2rem;
     text-align: left;
@@ -56,8 +73,10 @@
     }
 
     @media (max-width: $breakpoint-xxs) {
-      font-size: 2.8rem;
+      font-size: 2.6rem;
       text-align: center;
+      width: 20rem;
+      margin-left: 12rem;
     }
   }
 
@@ -77,6 +96,11 @@
       @media (max-width: $breakpoint-sm) {
         justify-content: center;
       }
+
+      @media (max-width: $breakpoint-xxs) {
+        margin-left: 12rem;
+        width: 20rem;
+      }
   
       & a {
         font-size: 3.5rem;
@@ -92,7 +116,8 @@
       position: absolute;
       top: 3rem;
       left: 5rem;
-      width: 25rem;
+      width: 30rem;
+      height: auto;
       color: white;
       background-color: rgba(0,0,0,0.05);
       border-radius: 1000rem;
@@ -107,6 +132,11 @@
       @media (max-width: $breakpoint-xs) {
         left: 23vw;
         width: 20rem;
+      }
+
+      @media (max-width: $breakpoint-xxs) {
+        left: 24vw;
+        width: 18rem;
       }
     }
 

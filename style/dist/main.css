@@ -27,7 +27,7 @@ html {
 }
 @media (max-width: 20em) {
   html {
-    font-size: 62.5%;
+    font-size: 50%;
   }
 }
 
@@ -59,6 +59,11 @@ body {
 @media (max-width: 37.5em) {
   .section__title {
     font-size: 3.5rem;
+  }
+}
+@media (max-width: 20em) {
+  .section__title {
+    font-size: 3rem;
   }
 }
 
@@ -224,6 +229,12 @@ body {
     border: 0px;
   }
 }
+@media (max-width: 20em) {
+  .footer {
+    border: 0px;
+    margin-left: -2.5rem;
+  }
+}
 .footer__container {
   max-width: 112.5rem;
   width: 100%;
@@ -317,6 +328,15 @@ body {
     padding: 0.5rem 0rem;
   }
 }
+@media (max-width: 20em) {
+  .about {
+    height: 100%;
+    -webkit-clip-path: none;
+    clip-path: none;
+    padding: 0 0rem;
+    margin-left: -3.8rem;
+  }
+}
 .about__container {
   max-width: 112.5rem;
   width: 100%;
@@ -359,7 +379,7 @@ body {
 @media (max-width: 20em) {
   .about__container {
     max-width: 20rem;
-    padding: 0 1rem;
+    padding: 1rem 1rem;
   }
 }
 .about__wrapper {
@@ -413,6 +433,13 @@ body {
     margin-top: 4rem;
   }
 }
+@media (max-width: 20em) {
+  .about__wrapper-image {
+    flex: 0 0 100%;
+    padding-bottom: 0.5rem;
+    margin-top: 4rem;
+  }
+}
 .about__wrapper-image-content {
   max-width: 35rem;
   height: auto;
@@ -453,11 +480,10 @@ body {
     margin-bottom: 4rem;
   }
 }
-@media (max-width: 37.5em) {
+@media (max-width: 20em) {
   .about__wrapper-info-text {
     flex: 0 0 100%;
-    font-size: 1.9rem;
-    margin-left: 0;
+    font-size: 2rem;
     width: 30rem;
     margin-bottom: 4rem;
   }
@@ -476,6 +502,15 @@ body {
     clip-path: none;
     margin-top: 0;
     -webkit-clip-path: none;
+  }
+}
+@media (max-width: 20em) {
+  .contact {
+    padding: 5rem 0;
+    clip-path: none;
+    margin-top: 0;
+    -webkit-clip-path: none;
+    margin-left: -4rem;
   }
 }
 .contact__container {
@@ -520,7 +555,7 @@ body {
 @media (max-width: 20em) {
   .contact__container {
     max-width: 20rem;
-    padding: 0 1rem;
+    padding: 1rem 1rem;
   }
 }
 .contact__wrapper {
@@ -606,13 +641,73 @@ body {
     padding: 0rem 2.2rem;
   }
 }
+@media (max-width: 20em) {
+  .hero {
+    padding: 0rem 2.2rem;
+    margin-bottom: -4rem;
+    max-width: 25rem;
+    height: 100vh;
+  }
+}
 .hero__container {
   z-index: 2;
+  max-width: 112.5rem;
+  width: 100%;
+  /*1 rem = 16px --> 1200px; Bezug auf Standardschriftgröße von Browser*/
+  margin: 4rem auto;
+  /*mittig zentriert*/
+  padding: 0 2rem;
+}
+.hero__container::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+@media (max-width: 75em) {
+  .hero__container {
+    max-width: 75rem;
+  }
+}
+@media (max-width: 62em) {
+  .hero__container {
+    max-width: 62rem;
+  }
+}
+@media (max-width: 56.25) {
+  .hero__container {
+    max-width: 56.25rem;
+  }
+}
+@media (max-width: 48em) {
+  .hero__container {
+    max-width: 48rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .hero__container {
+    max-width: 37.5rem;
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 20em) {
+  .hero__container {
+    max-width: 20rem;
+    padding: 1rem 1rem;
+  }
+}
+@media (max-width: 20em) {
+  .hero__container {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .hero__title {
   font-size: 6.2rem;
   font-weight: 700;
-  color: #d8d7d4;
+  color: #dfdfdf;
   margin-top: 3.2rem;
   margin-bottom: 3.2rem;
   text-align: left;
@@ -642,8 +737,10 @@ body {
 }
 @media (max-width: 20em) {
   .hero__title {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     text-align: center;
+    width: 20rem;
+    margin-left: 12rem;
   }
 }
 .hero__name {
@@ -662,6 +759,12 @@ body {
     justify-content: center;
   }
 }
+@media (max-width: 20em) {
+  .hero__cta {
+    margin-left: 12rem;
+    width: 20rem;
+  }
+}
 .hero__cta a {
   font-size: 3.5rem;
   z-index: 2;
@@ -675,7 +778,8 @@ body {
   position: absolute;
   top: 3rem;
   left: 5rem;
-  width: 25rem;
+  width: 30rem;
+  height: auto;
   color: white;
   background-color: rgba(0, 0, 0, 0.05);
   border-radius: 1000rem;
@@ -690,6 +794,12 @@ body {
   .hero__logo {
     left: 23vw;
     width: 20rem;
+  }
+}
+@media (max-width: 20em) {
+  .hero__logo {
+    left: 24vw;
+    width: 18rem;
   }
 }
 .hero__video {
@@ -756,6 +866,13 @@ body {
     padding-top: 5rem;
   }
 }
+@media (max-width: 20em) {
+  .projects {
+    margin-top: 0;
+    padding-top: 1rem;
+    margin-left: -3.8rem;
+  }
+}
 .projects__image {
   max-width: 100%;
   height: auto;
@@ -802,7 +919,7 @@ body {
 @media (max-width: 20em) {
   .projects__container {
     max-width: 20rem;
-    padding: 0 1rem;
+    padding: 1rem 1rem;
   }
 }
 .projects__wrapper {

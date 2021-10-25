@@ -20,6 +20,15 @@
     padding: 0.5rem 0rem;
   }
 
+  @media (max-width: $breakpoint-xxs) {
+    height: 100%;
+    -webkit-clip-path: none;
+    clip-path: none;
+    padding: 0 0rem;
+    margin-left: -3.8rem;
+  }
+
+
   &__container {
     @include make-container();
   }
@@ -71,6 +80,12 @@
         margin-top: 4rem;
       }
 
+      @media (max-width: $breakpoint-xxs) {
+        flex: 0 0 100%;
+        padding-bottom: 0.5rem;
+        margin-top: 4rem;
+      }
+
 
 
       &-content {
@@ -112,10 +127,9 @@
           margin-bottom: 4rem;
         }
 
-        @media (max-width: $breakpoint-xs) {
+        @media (max-width: $breakpoint-xxs) {
           flex: 0 0 100%;
-          font-size: 1.9rem;
-          margin-left: 0;
+          font-size: 2rem;
           width: 30rem;
           margin-bottom: 4rem;
         }

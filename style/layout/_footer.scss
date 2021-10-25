@@ -12,6 +12,11 @@
     border: 0px;
   }
 
+  @media (max-width: $breakpoint-xxs) {
+    border: 0px;
+    margin-left: -2.5rem;
+  }
+
   &__container {
     max-width: 112.5rem;
     width: 100%;

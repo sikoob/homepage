@@ -16,6 +16,14 @@
     -webkit-clip-path: none;
   }
 
+  @media (max-width: $breakpoint-xxs) {
+    padding: 5rem 0;
+    clip-path: none;
+    margin-top: 0;
+    -webkit-clip-path: none;
+    margin-left: -4rem;
+  }
+
   &__container {
     @include make-container();
   }
