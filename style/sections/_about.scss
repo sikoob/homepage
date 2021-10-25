@@ -13,6 +13,13 @@
     clip-path: none;
   }
 
+  @media (max-width: $breakpoint-xs) {
+    height: 100%;
+    -webkit-clip-path: none;
+    clip-path: none;
+    padding: 0.5rem 0rem;
+  }
+
   &__container {
     @include make-container();
   }
@@ -29,6 +36,12 @@
     padding: 0 0 6rem 0;
     max-width: 112.5em;
     margin-bottom: 4rem;
+
+    @media (max-width: $breakpoint-xs) {
+      flex-direction: column;
+      padding: 0 0 2rem 0;
+      margin-bottom: 2rem;
+    }
 
     & > div{          //für Abstand zwischen den beiden nachfolgenden Divs
     margin: 0 10rem;
@@ -52,11 +65,24 @@
         padding-bottom: 6.4rem;
       }
 
+      @media (max-width: $breakpoint-xs) {
+        flex: 0 0 100%;
+        padding-bottom: 0.5rem;
+        margin-top: 4rem;
+      }
+
+
+
       &-content {
         max-width: 35rem;
         height: auto;
         box-shadow: 0 1rem 3rem rgba(0,0,0 , 0.175);
         border-radius: 50%;
+
+        @media (max-width: $breakpoint-xxs) {
+          width: 30rem;
+          height: auto;
+        }
         
       }
     }
@@ -65,13 +91,9 @@
       flex: 0 0 66%;
       margin-left: 2.5rem;
 
-      &-title {
-        text-shadow: 0 0 0.5rem black;
-      }
-
       &-text {
-        text-align: left;
-        font-size: 2.2rem;
+        text-align: center;
+        font-size: $default-font-size;
         text-shadow: 0 0 0.5rem black;
 
         @media (max-width: $breakpoint-tablet) {
@@ -80,6 +102,22 @@
 
         @media (max-width: $breakpoint-sm) {
           text-align: center;
+        }
+
+        @media (max-width: $breakpoint-xs) {
+          flex: 0 0 100%;
+          font-size: 2rem;
+          margin-left: 0;
+          width: 32rem;
+          margin-bottom: 4rem;
+        }
+
+        @media (max-width: $breakpoint-xs) {
+          flex: 0 0 100%;
+          font-size: 1.9rem;
+          margin-left: 0;
+          width: 30rem;
+          margin-bottom: 4rem;
         }
       }
     }

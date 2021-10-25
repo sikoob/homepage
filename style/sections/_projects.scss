@@ -46,13 +46,13 @@
     margin-bottom: 8rem;
 
     @media (max-width: $breakpoint-xs) {
+      flex-direction: column;
       margin-bottom: 4rem;
     }
 
     &-text {
       position: relative;
       flex: 0 0 33%;
-      float: left;
       margin-right: 4rem;
       text-align: left;
 
@@ -62,8 +62,9 @@
 
       @media (max-width: $breakpoint-xs) {
         flex: 0 0 100%;
-        float: none;
-        margin-bottom: 2.5rem !important;
+        text-align: center;
+        margin-bottom: 3rem !important;
+        margin-right: 0;
       }
       
       & p > a {
@@ -77,23 +78,33 @@
       font-size: $mid-font-size;
 
       @media (max-width: $breakpoint-xs) {
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
     }
 
     &-paragraph {
       font-size: $default-font-size;
       margin-bottom: 3.5rem;
+
+      @media (max-width: $breakpoint-xs) {
+        font-size:2rem;
+        width: 32rem;
+      }
+
+      @media (max-width: $breakpoint-xs) {
+        font-size: 2rem;
+        width: 30rem;
+      }
     }
 
     &-column-image {
       flex: 0 0 66%;
-      float: right;
       margin-left: 4rem;
 
       @media (max-width: $breakpoint-xs) {
         flex: 0 0 100%;
-        float: none;
+        margin-left: 0;
+        margin-top: 3rem;
       }
     }
 
@@ -104,6 +115,10 @@
       @media (max-width: $breakpoint-l) {
         width: 100%;
         margin: 0;
+      }
+
+      @media (max-width: $breakpoint-xs) {
+        height: 100%;
       }
 
       &-content {
