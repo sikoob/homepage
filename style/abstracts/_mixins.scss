@@ -43,6 +43,10 @@
 
   @include clearfix;
 
+  @media (max-width: $breakpoint-xxl) {
+    max-width: 112.5rem;
+  }
+
   @media (max-width: $breakpoint-l) {
     max-width: 75rem;
   }

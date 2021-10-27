@@ -14,7 +14,7 @@
 
   @media (max-width: $breakpoint-xxs) {
     border: 0px;
-    margin-left: -2.5rem;
+    width: 40rem;
   }
 
   &__container {
@@ -28,6 +28,11 @@
     @media (max-width: $breakpoint-xs) {
         padding: 0 1rem;
     }
+
+    @media (max-width: $breakpoint-xxs) {
+      width: 20rem;
+      padding: 0 1rem;
+  }
 
     &::after {
       display: block;
@@ -46,7 +51,11 @@
       text-align: center;
       text-decoration: none;
       color: darken($white-color, 50%);
-      font-size: 1.4rem;
+      font-size: 2.2rem;
+
+      @media (max-width: $breakpoint-md) {
+        font-size: 2rem;
+      }
     }
 
     a.footer__text-content:hover {

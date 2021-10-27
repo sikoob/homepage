@@ -7,6 +7,12 @@
     width: 50rem;
     height: auto;
 
+    @media (max-width: $breakpoint-sm) {
+        width: 45rem;
+        margin-top: 4rem;
+        margin-left:-8rem;
+    }
+
     @media (max-width: $breakpoint-xs) {
         width: 30rem;
       }

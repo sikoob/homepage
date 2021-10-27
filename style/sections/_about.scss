@@ -25,7 +25,6 @@
     -webkit-clip-path: none;
     clip-path: none;
     padding: 0 0rem;
-    margin-left: -3.8rem;
   }
 
 
@@ -54,6 +53,10 @@
 
     & > div{          //für Abstand zwischen den beiden nachfolgenden Divs
     margin: 0 10rem;
+
+    @media (max-width: $breakpoint-tablet) {
+      margin: 0 3rem;
+    }
     }
 
     @media (max-width: $breakpoint-xs) {
@@ -94,9 +97,8 @@
         box-shadow: 0 1rem 3rem rgba(0,0,0 , 0.175);
         border-radius: 50%;
 
-        @media (max-width: $breakpoint-xxs) {
+        @media (max-width: $breakpoint-l) {
           width: 30rem;
-          height: auto;
         }
         
       }
@@ -108,7 +110,7 @@
 
       &-text {
         text-align: center;
-        font-size: $default-font-size;
+        font-size: $mid-font-size;
         text-shadow: 0 0 0.5rem black;
 
         @media (max-width: $breakpoint-tablet) {
