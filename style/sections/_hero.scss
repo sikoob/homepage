@@ -38,12 +38,17 @@
       width: 100rem;
     }
 
-    @media (max-width: $breakpoint-xxs) {
-      width: 20rem;
+    @media (max-width:$breakpoint-sm) {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      width: 48rem;
+    }
+
+    @media (max-width: $breakpoint-xxs) {
+      width: 20rem;
+
     }
   }
 
@@ -63,12 +68,17 @@
 
     @media (max-width: $breakpoint-l) {
       font-size: 8rem;
+      margin-top: 2.5rem;
     }
 
     @media (max-width: $breakpoint-tablet) {
       font-size: 7rem;
       text-align: center;
       margin-bottom: 10rem;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      font-size: 5rem;
     }
 
     @media (max-width: $breakpoint-xs) {
@@ -79,7 +89,6 @@
 
     @media (max-width: $breakpoint-xxs) {
       font-size: 2.6rem;
-      text-align: center;
       width: 20rem;
       margin-left: 15rem;
     }
@@ -115,7 +124,10 @@
           font-size: 5rem;
         }
 
-  
+        @media (max-width: $breakpoint-sm) {
+          font-size: 4rem;
+        }
+
         @media (max-width: $breakpoint-xs) {
           font-size: 2rem;
         }
@@ -141,6 +153,11 @@
 
         @media (max-width: $breakpoint-l) {
           width: 35rem;
+        }
+
+        @media (max-width: $breakpoint-sm) {
+          width: 30rem;
+          left: 30vw;
         }
 
     

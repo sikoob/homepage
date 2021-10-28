@@ -72,14 +72,10 @@
 
     &-text-content,
     a {
-      font-size: 2.4rem;
+      font-size: $mid-font-size;
 
       @media (max-width: $breakpoint-l) {
-        font-size: 2.5rem;
-      }
-
-      @media (max-width: $breakpoint-md) {
-        font-size: 2.7rem;
+        font-size: 2.8rem;
       }
 
 
