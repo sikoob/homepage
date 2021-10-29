@@ -56,6 +56,10 @@
       @media (max-width: $breakpoint-md) {
         font-size: 2rem;
       }
+
+      @media (max-width: $breakpoint-xs) {
+        font-size: 1.5rem;
+      }
     }
 
     a.footer__text-content:hover {
@@ -63,8 +67,6 @@
     }
 
   }
-
-    
 
   &__horizontal {
     margin: 1rem auto;

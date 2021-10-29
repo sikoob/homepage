@@ -17,7 +17,7 @@
   }
 
   @media (max-width: $breakpoint-xxs) {
-    padding: 5rem 0;
+    padding: 2rem 0;
     clip-path: none;
     margin-top: 0;
     -webkit-clip-path: none;
@@ -68,6 +68,11 @@
     &-text-content {
       margin-bottom: 4rem;
       color: $white-color;
+      text-shadow: 0 0 0.5rem black;
+
+      @media (max-width: $breakpoint-xxs) {
+        margin-bottom: 3rem;
+      }
     }
 
     &-text-content,
@@ -82,6 +87,10 @@
       @media (max-width: $breakpoint-xs) {
         font-size: 2rem;
       }
+
+      @media (max-width: $breakpoint-xxs) {
+        font-size: 1.8rem;
+      }
     }
       
     &-logo {
@@ -90,16 +99,14 @@
       @media (max-width: $breakpoint-l) {
         margin-left: 8rem;
       }
-      
-
+    
       @media (max-width: $breakpoint-sm) {
         margin-top: 4rem;
         flex: 0 0 100%;
       }
 
       @media (max-width: $breakpoint-xxs) {
-        margin-top: 4rem;
-        flex: 0 0 100%;
+        margin-top: 1rem;
       }
     }
   }

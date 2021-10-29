@@ -88,9 +88,10 @@
     }
 
     @media (max-width: $breakpoint-xxs) {
-      font-size: 2.6rem;
+      font-size: 2rem;
       width: 20rem;
       margin-left: 15rem;
+      margin-bottom: 1.5rem;
     }
   }
 
@@ -112,6 +113,7 @@
       }
 
       @media (max-width: $breakpoint-xxs) {
+        font-size: 1.5rem;
         margin-left: 15rem;
         width: 20rem;
       }
@@ -167,8 +169,8 @@
       }
 
       @media (max-width: $breakpoint-xxs) {
-        left: 28vw;
-        width: 18rem;
+        left: 32vw;
+        width: 15rem;
       }
     }
 
