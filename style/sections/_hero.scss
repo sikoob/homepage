@@ -189,6 +189,11 @@
           object-fit: cover;
           object-position: center center;
       }
+
+      @media (max-width: $breakpoint-tablet) {
+        overflow: hidden;
+        height: 100%;
+      }
     }
 
     &__video-colorize {
