@@ -960,6 +960,12 @@ body {
     object-position: center center;
   }
 }
+@media (max-width: 56.25em) {
+  .hero__video {
+    overflow: hidden;
+    height: 100%;
+  }
+}
 .hero__video-colorize {
   position: absolute;
   z-index: 1;
