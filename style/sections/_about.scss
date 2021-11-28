@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .about {
   background-color: $primary-color;
   background-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
@@ -24,6 +26,10 @@
 
   &__container {
     @include make-container();
+  }
+
+  &__contact {
+    color: lighten($primary-color, 55%);
   }
 
   &__wrapper {

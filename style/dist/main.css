@@ -413,6 +413,9 @@ body {
     padding: 1rem 1rem;
   }
 }
+.about__contact {
+  color: #b2d2d9;
+}
 .about__wrapper {
   position: relative;
   top: 0;
