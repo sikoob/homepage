@@ -44,32 +44,14 @@
   @include clearfix;
 
   @media (max-width: $breakpoint-xxl) {
-    max-width: 112.5rem;
-  }
-
-  @media (max-width: $breakpoint-l) {
-    max-width: 75rem;
-  }
-
-  @media (max-width: $breakpoint-md) {
-    max-width: 62rem;
-  }
-
-  @media (max-width: $breakpoint-tablet) {
-    max-width: 56.25rem;
-  }
-
-  @media (max-width: $breakpoint-sm) {
-    max-width: 48rem;
+    max-width: 100%;
   }
 
   @media (max-width: $breakpoint-xs) {
-    max-width: 37.5rem;
     padding: 0 1rem;
   }
 
   @media (max-width: $breakpoint-xxs) {
-    max-width: 20rem;
     padding: 1rem 1rem;
   }
 }
